@@ -1,0 +1,6 @@
+    [
+        {"id":1, "moneda": "Bitcoin", "valor": 27000 },
+        {"id":2, "moneda": "Ethereum", "valor": 1767},
+        {"id":3, "moneda": "USDT", "valor": 1}
+
+    ]

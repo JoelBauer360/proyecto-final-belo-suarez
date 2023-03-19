@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./functions.js"></script>
+    <title>BinAR</title>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div>
+                <strong><p id="list"></p></strong>
+            </div>
+            <div class="cerrar">
+                <a href="./index.html">Cerrar sesión</a>
+            </div>
+        </div>
+        <div class="titulo">
+            <h1>BinAR</h1>
+        </div>
+    </header>
+    <div class="flex">
+        <div>
+            <div>
+                <h3 class="saldo">Saldo total en pesos:<span id="total"> $ 0</span></h3><br><br>
+            </div>
+            <div class="flexi">
+                <div>
+                    <h3>Sus Cryptos:</h2><br>
+                    <h3>BTC:<span id="btctotal"> 0</span></h3>
+                    <h3>ETH:<span id="ethtotal"> 0</span></h3>
+                    <h3>USDT:<span id="usdttotal"> 0</span></h3>
+                </div><br><br>
+                <div>
+                    <h3>Invirtiendo:</h2><br>
+                    <h3>BTC:<span id="btcinvesttotal"> 0</span></h3>
+                    <h3>ETH:<span id="ethinvesttotal"> 0</span></h3>
+                    <h3>USDT:<span id="usdtinvesttotal"> 0</span></h3>
+                </div>
+            </div>
+        </div>
+        <div>
+	<form>
+        <h3>Seleccione la operación que va a realizar.</h3><br><br>
+			<b>Depósito</b>
+			<input type="checkbox" value="1" onchange="javascript:showContent('deposit',this)" />
+		<div id="deposit" class="hide">
+			Ingresa el Depósito a Realizar <input type="text" id="depositbtn">
+			<input type="button" value="Enter" onclick="deposito()">
+                    <div id="error1"></div>
+		</div>
+		<div>
+			<b>Retiro</b>
+			<input type="checkbox" value="1" onchange="javascript:showContent('withdraw',this)" />
+			<div id="withdraw" class="hide">
+				Ingresa el retiro a Realizar <input id="withdrawbtn"type="text">
+				<input type="button" value="Enter" onclick="retiro()">
+                <div id="error"></div>
+			</div>
+		</div>
+	</form>
+    <div>
+        <form>
+            <div>
+                <b>Comprar criptomonedas</b>
+                <input type="checkbox" value="1" onchange="javascript:showContent('buy',this)" />
+                <br>
+                <div id="buy" class="hide"><br>
+                    1 - Bitcoin <input type="text" id="buybtc">
+                    <input type="button" value="Comprar" onclick="buyBtc()"><br><div id="errorbtc"></div><br>
+                    2 - Ethereum <input type="text" id="buyeth">
+                    <input type="button" value="Comprar" onclick="buyEth()"><br><div id="erroreth"></div><br>
+                    3 - Usdt <input type="text" id="buyusdt">
+                    <input type="button" value="Comprar" onclick="buyUsdt()"><br><div id="errorusdt"></div><br>
+                </div>
+            </div>
+            <div>
+                <b>Invertir criptomonedas</b>
+                <input type="checkbox" value="1" onchange="javascript:showContent('invest',this)" />
+                <br>
+                <div id="invest" class="hide"><br>
+                    1 - Bitcoin <input type="text" id="investbtc">
+                    <input type="button" value="invertir" onclick="investBtc()"><br>
+                    <div id="errorbtc1"></div><br>
+                    2 - Ethereum <input type="text" id="investeth">
+                    <input type="button" value="invertir" onclick="investEth()"><br>
+                    <div id="erroreth1"></div><br>
+                    3 - Usdt <input type="text" id="investusdt">
+                    <input type="button" value="invertir" onclick="investUsdt()"><br>
+                    <div id="errorusdt1"></div><br>
+                </div>
+            </div>
+        </form>
+    </div>
+        </div>
+    </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <footer>
+        <p>BinAR® todos los derechos reservados 2023.</p>
+      </footer>
+</body>
+</html>
